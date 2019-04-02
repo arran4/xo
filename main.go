@@ -25,6 +25,7 @@ import (
 )
 
 func main() {
+	log.SetFlags(log.Flags() | log.Lshortfile)
 	// circumvent all logic to just determine if xo was built with oracle
 	// support
 	if len(os.Args) == 2 && os.Args[1] == "--has-oracle-support" {
